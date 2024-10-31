@@ -16,21 +16,24 @@
             <h1>Manager Login</h1>
         </section>
 
-        <section id="inputs-section">
+        <form id="inputs-section" method="post" action="{% url 'login_verifier' %}">
+            {% csrf_token %}
             <div class="login-div-form">
-                <div class="login-form-img"><img src="{% static 'login/images/usuario.png' %}" alt="usuário"></div>
-                <input class="login-form" type="text" name="username" required placeholder="Login"></input>
+                <div class="login-form-img">
+                    <img src="{% static 'login/images/usuario.png' %}" alt="usuário">
+                </div>
+                <input class="login-form" type="text" name="username" required placeholder="Login">
             </div>
-    
+        
             <div class="login-div-form">
-                <div class="login-form-img"><img src="{% static 'login/images/cadeado.png' %}" alt="usuário"></div>
-                <input class="login-form" type="password" name="password" required placeholder="Password"></input>
+                <div class="login-form-img">
+                    <img src="{% static 'login/images/cadeado.png' %}" alt="senha">
+                </div>
+                <input class="login-form" type="password" name="password" required placeholder="Password">
             </div>
-
-            <button id="submit">
-                Login
-            </button>
-        </section>
+        
+            <button id="submit" type="submit">Login</button>
+        </form>
 
 
     </section>
