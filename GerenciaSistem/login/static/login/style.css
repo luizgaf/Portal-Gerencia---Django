@@ -1,0 +1,110 @@
+body{
+    background-image: url(images/loginbackground.jpg);
+    height: 100vh;
+    margin: 0;
+    display: flex;
+}
+#login-box{
+    width: 400px;
+    height: 500px;
+    background-color: white;
+
+    border-radius: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+
+
+    /* boxahdow */
+    -webkit-box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.46);
+    -moz-box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.46);
+    box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.46);
+}
+.login-form-img{
+    height: 45px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    background-color: rgb(218, 218, 218);
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 5px;
+}
+
+.login-form{
+    height: 100%;
+    width: 80%;
+    background-color: white;
+    border: 1.5px solid rgb(204, 204, 204);
+    border-radius: 5px;
+}
+input {
+    padding-left: 15px; /* Ajuste o valor para mover o placeholder mais à direita */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box; /* Garante que o padding não aumente a largura */
+}
+
+/* Remove o contorno padrão e personaliza o foco */
+input:focus {
+    outline: none; /* Remove o contorno padrão */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Adiciona um brilho leve ao redor */
+    border: 1px solid #007bff; /* Altera a borda ao clicar */
+}
+
+.login-div-form{
+    width: 280px;
+    height: 47px;
+    display: flex;
+}
+.self-center{
+    align-self: center;
+    margin: auto;
+}
+
+#submit{
+    width: 280px;
+    height: 47px;
+    background-color: #004c9c;
+    color: white;
+    font-size:15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+    border-radius: 5px;
+    border: none;
+}
+#submit:hover{
+    transform: scale(1.01);
+    background-color: #00438b;
+}
+#submit:focus{outline: none;}
+
+#inputs-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+
+    margin-bottom: 30px;
+    width: 100%;
+}
+#top-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#top-section>h1{
+    margin-top: 0px;
+    margin-bottom: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
