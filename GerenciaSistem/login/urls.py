@@ -3,5 +3,5 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='login'),
-    path('loginVef/', views.loginVef, name='login_verifier')
+    path('next=/', views.loginVef, name='login_verifier')
 ]

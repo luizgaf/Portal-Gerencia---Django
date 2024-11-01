@@ -5,6 +5,7 @@ def index(request):
 
 from django.contrib.auth import authenticate, login
 from django.shortcuts import redirect
+from django.urls import reverse
 
 #temporario
 from django.http import JsonResponse
@@ -21,7 +22,8 @@ def loginVef(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            return JsonResponse({'status': 'success', 'message': 'Senha correta!'})
+            destino = reverse('mainpage:home')
+            return redirect(destino)
 
         else:
             return JsonResponse({'status': 'error', 'message': 'Senha incorreta!'})
