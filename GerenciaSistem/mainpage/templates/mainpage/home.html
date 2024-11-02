@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Company - Home</title>
     <link rel="icon" type="image/png" href="{% static 'mainpage/images/logoonly.png' %}">
-    <link rel="stylesheet" href="{% static 'mainpage/home/style.css' %}">
+    <link rel="stylesheet" href="{% static 'mainpage/home.css' %}">
 </head>
 
 
@@ -16,11 +16,9 @@
             <div id="nav-bar-logo"><img src="{%static 'mainpage/images/logo.png'%}" alt="logo"></div>
 
             <div id="nav-bar-nav">
-                <li>
-                    <a href="">Home</a>
-                    <a href="">Home</a>
-                    <a href="">Home</a> 
-                </li>
+                <a href="/main/home" class="nav-button"><h1>Home</h1></a>
+                <a href="/main/manage" class="nav-button"><h1>Gerenciamento</h1></a>
+                <a href="/main/news" class="nav-button"><h1>Noticias</h1></a> 
             </div>
         </nav>
     </header>
