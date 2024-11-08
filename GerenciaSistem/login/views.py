@@ -4,11 +4,9 @@ def index(request):
     return render(request, 'login/index.html')
 
 from django.contrib.auth import authenticate, login
+from django.contrib import messages
 from django.shortcuts import redirect
 from django.urls import reverse
-
-#temporario
-from django.http import JsonResponse
 
 
 def loginVef(request):
@@ -20,12 +18,14 @@ def loginVef(request):
         password = request.POST['password']
 
         user = authenticate(request, username=username, password=password)
+
         if user is not None:
             login(request, user)
             destino = reverse('mainpage:home')
             return redirect(destino)
 
         else:
-            return JsonResponse({'status': 'error', 'message': 'Senha incorreta!'})
+            messages.error(request, 'Senha ou Login Incorretos')
+            return render(request, 'login/index.html')
 
-    return JsonResponse({'status': 'error', 'message': 'Método inválido!'})
+    return render(request, 'login/index.html')
